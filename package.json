@@ -26,6 +26,7 @@
     "lint": "yarn lint:cmd -- babel benchmarks docs jest src",
     "lint:cmd": "eslint --ignore-path .gitignore --fix",
     "precommit": "lint-staged",
+    "prepare": "yarn install --ignore-scripts && yarn compile",
     "release": "yarn lint && yarn test && yarn build && npm publish",
     "test": "flow && jest"
   },
